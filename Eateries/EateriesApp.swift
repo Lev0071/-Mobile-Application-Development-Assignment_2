@@ -10,6 +10,7 @@ import SwiftUI
 @main
 struct EateriesApp: App {
     
+    //MARK: - PROPERTIES
     /// Import pre-prepared Data
     var eateries:[Eatery] = {
         
@@ -17,7 +18,7 @@ struct EateriesApp: App {
                 
         return eateriesData
     }()
-    
+    //MARK: - BODY
     var body: some Scene {
         WindowGroup {
             ContentView(eateries: eateries)

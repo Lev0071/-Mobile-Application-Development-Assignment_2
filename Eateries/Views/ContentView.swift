@@ -11,12 +11,11 @@ struct ContentView: View {
     
     var eateries: [Eatery]
     
+    //MARK: - BODY
     var body: some View {
-        List{
-            ForEach(eateries){ listItem in
-                Text("\(listItem.name)")
-                    .padding()
-            }
+        NavigationView {
+            MasterView(eateries: eateries)
+                .navigationTitle("Eateries")
         }
     }
 }

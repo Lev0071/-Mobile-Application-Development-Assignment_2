@@ -8,13 +8,25 @@
 import SwiftUI
 
 struct MasterView: View {
+    
+    //MARK: - PROPERTIES
+    var eateries: [Eatery]
+    
+    //MARK: - BODY
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List{
+            ForEach(eateries){ listItem in
+                NavigationLink(
+                    destination: DetailView(selectedEatery: listItem)) {
+                    DetailRowView(eatery: listItem)
+                }
+            }
+        }
     }
 }
 
 struct MasterView_Previews: PreviewProvider {
     static var previews: some View {
-        MasterView()
+        MasterView(eateries: Eateries.start)
     }
 }
