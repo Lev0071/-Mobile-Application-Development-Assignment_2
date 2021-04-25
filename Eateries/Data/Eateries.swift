@@ -32,6 +32,6 @@ struct InitialReviews {
         
         Review(reviewer: "Réne", comment: "The quality of food and service does not live up to its name, it was not like this before.Essentially,There is a big gap in quality now. New management has reduced the business to just syntactic sugar"),
         
-        Review(reviewer: "Andre", comment: "They said they forgot to put the wedding ring in the desert!, no body knows where it is!. Don't visit this place!")
+        Review(reviewer: "Andre", comment: "They said they forgot to put the wedding ring in the pudding!, no body knows where it is!. Don't visit this place!")
     ]
 }

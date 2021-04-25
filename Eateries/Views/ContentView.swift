@@ -16,6 +16,11 @@ struct ContentView: View {
         NavigationView {
             MasterView(eateries: eateries)
                 .navigationTitle("Eateries")
+                .navigationBarItems(
+                    leading: EditButton(),
+                    trailing: Button(action: {print("Add Eatery")}) {
+                        Image(systemName: "plus")
+                    })
         }
     }
 }
