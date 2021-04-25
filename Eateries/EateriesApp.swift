@@ -9,9 +9,18 @@ import SwiftUI
 
 @main
 struct EateriesApp: App {
+    
+    /// Import pre-prepared Data
+    var eateries:[Eatery] = {
+        
+        let eateriesData = Eateries.start
+                
+        return eateriesData
+    }()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(eateries: eateries)
         }
     }
 }

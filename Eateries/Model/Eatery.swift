@@ -24,7 +24,7 @@ class Eatery:Identifiable,Equatable {
     var location: String
     var notes: String
     var reviews: [Review]
-    var imageURLString: URL?
+    var imageURL: URL?
     
     init(name:String,location:String,notes:String,reviews:[Review]) {
         self.name = name
