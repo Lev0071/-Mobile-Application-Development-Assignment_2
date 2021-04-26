@@ -23,7 +23,7 @@ struct HeaderView: View {
                     .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.13), radius: 8, x: 6, y: 8)
                     .padding(.vertical,20) // mainly Usefull for ipad screen
         //}//: ZSTACK
-        .frame(height:440)
+        .frame(height:350)
     }
 
 }

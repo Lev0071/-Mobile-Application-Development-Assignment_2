@@ -19,21 +19,23 @@ struct DetailView: View {
             // HEADER SECTION
             HeaderView()
             VStack(alignment: .leading, spacing: 13){/**/
-            Section(header: Text(selectedEatery.name)) {
-                Text("\(selectedEatery.location)")
-            }//: SECTION #1
-            Section(header: Text("Notes")) {
-                Text("\(selectedEatery.notes)")
-            }//: SECTION #2
-            Section(header: Text("Reviews")) {
-                if let content = selectedEatery.reviews{
-                    ForEach(selectedEatery.reviews!){ review in
-                        Text("\(review.reviewer)")
-                        Text("\(review.comment)")
-                        Spacer()
-                    }
-                }
-            }//: SECTION #3
+                List{
+                    Section(header: Text(selectedEatery.name).font(.largeTitle)) {
+                            Text("\(selectedEatery.location)").font(.body)
+                    }//: SECTION #1
+                    Section(header: Text("Notes").font(.title2)) {
+                            Text("\(selectedEatery.notes)").font(.body)
+                    }//: SECTION #2
+                    Section(header: Text("Reviews").font(.title2)) {
+                        if let content = selectedEatery.reviews{
+                            ForEach(selectedEatery.reviews!){ review in
+                                Text("\(review.reviewer)")
+                                Text("\(review.comment)")
+                                    .font(.body)
+                            }
+                        }
+                    }//: SECTION #3
+                }//: LIST
         }//: VSTACK 2
         .padding(.horizontal,15)
         .frame(maxWidth:640, alignment: .center) // Width compatibable up to Ipad screens
