@@ -15,7 +15,7 @@ struct HeaderView: View {
                 Image("<Add eatery Name>")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 300, height: 250, alignment: .center)
+                    .frame(width: 200, height: 167, alignment: .center)// was 300:250
                     .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                     .overlay(
                         Circle().stroke(Color.white,lineWidth: 3)
@@ -23,7 +23,7 @@ struct HeaderView: View {
                     .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.13), radius: 8, x: 6, y: 8)
                     .padding(.vertical,20) // mainly Usefull for ipad screen
         //}//: ZSTACK
-        .frame(height:350)
+        .frame(height:200)//was 440
     }
 
 }
