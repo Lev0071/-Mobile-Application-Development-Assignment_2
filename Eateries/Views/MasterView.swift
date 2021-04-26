@@ -10,7 +10,7 @@ import SwiftUI
 struct MasterView: View {
     
     //MARK: - PROPERTIES
-    var eateries: [Eatery]
+    @Binding var eateries: [Eatery]
     
     //MARK: - BODY
     var body: some View {
@@ -25,8 +25,8 @@ struct MasterView: View {
     }
 }
 
-struct MasterView_Previews: PreviewProvider {
-    static var previews: some View {
-        MasterView(eateries: Eateries.start)
-    }
-}
+//struct MasterView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MasterView(eateries: Eateries.start)
+//    }
+//}
