@@ -14,7 +14,7 @@ struct DetailView: View {
     
     //MARK: - BODY
     var body: some View {
-        
+ 
         VStack{
             // HEADER SECTION
             HeaderView()
